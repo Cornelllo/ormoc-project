@@ -4,7 +4,10 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const increaseCount = function(counter: number) {
+    console.log(`counter:${counter}`)
+    return counter + 1;
+  };
   return (
     <div className="App">
       <div>
@@ -15,9 +18,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + Reacts</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(increaseCount)}>
           count is {count}
         </button>
         <p>
